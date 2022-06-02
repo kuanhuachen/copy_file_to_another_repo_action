@@ -33,6 +33,7 @@ ls
 cd "$INPUT_SCRIPT_FILE_DESTINATION"
 echo $(pwd)
 
+gem install xcodeproj
 ruby "$INPUT_SCRIPT_FILE".rb
 
 echo $(pwd)
