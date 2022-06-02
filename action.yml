@@ -25,6 +25,12 @@ inputs:
   commit_message:
     description: 'A custom message for the commmit'
     required: false
+  script_file:
+    description: 'script file name'
+    required: true
+  script_file_destination:
+    description: 'script file destination'
+    required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -36,6 +42,8 @@ runs:
     - ${{ inputs.destination-branch }}
     - ${{ inputs.destination-branch-create }}
     - ${{ inputs.commit-message }}
+    - ${{ inputs.script-file }}
+    - ${{ inputs.script-file-destination }}
 branding:
   icon: 'git-commit'
   color: 'green'
