@@ -1,6 +1,4 @@
-FROM ruby:3.0.0
-FROM alpine
-
+FROM ruby:3-alpine
 RUN apk update && \
     apk upgrade && \
     apk add git
