@@ -25,11 +25,13 @@ git clone --single-branch --branch $INPUT_DESTINATION_BRANCH "https://x-access-t
 echo "Copying contents to git repo"
 mkdir -p $CLONE_DIR/$INPUT_DESTINATION_FOLDER
 cp -R "$INPUT_SOURCE_FILE" "$CLONE_DIR/$INPUT_DESTINATION_FOLDER"
-
 cd $CLONE_DIR
+
 cd "$INPUT_SCRIPT_FILE_DESTINATION"
 gem install xcodeproj
 ruby "$INPUT_SCRIPT_FILE".rb
+
+cd $CLONE_DIR
 
 if [ ! -z "$INPUT_DESTINATION_BRANCH_CREATE" ]
 then
