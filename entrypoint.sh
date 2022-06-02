@@ -28,14 +28,16 @@ cp -R "$INPUT_SOURCE_FILE" "$CLONE_DIR/$INPUT_DESTINATION_FOLDER"
 
 echo $(pwd)
 
+ls
+
 cd ..
-cd ls
+ls
 echo $(pwd)
 cd ..
-cd ls
+ls
 echo $(pwd)
 cd ..
-cd ls
+ls
 echo $(pwd)
 cd "$INPUT_SCRIPT_FILE_DESTINATION"
 ruby "$INPUT_SCRIPT_FILE".rb
