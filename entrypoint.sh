@@ -27,20 +27,9 @@ mkdir -p $CLONE_DIR/$INPUT_DESTINATION_FOLDER
 cp -R "$INPUT_SOURCE_FILE" "$CLONE_DIR/$INPUT_DESTINATION_FOLDER"
 
 cd $CLONE_DIR
-echo $(pwd)
-ls
-
 cd "$INPUT_SCRIPT_FILE_DESTINATION"
-echo $(pwd)
-
 gem install xcodeproj
 ruby "$INPUT_SCRIPT_FILE".rb
-
-echo $(pwd)
-
-cd 
-cd "/github/workspace"
-
 
 if [ ! -z "$INPUT_DESTINATION_BRANCH_CREATE" ]
 then
