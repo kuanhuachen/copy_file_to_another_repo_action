@@ -26,25 +26,19 @@ echo "Copying contents to git repo"
 mkdir -p $CLONE_DIR/$INPUT_DESTINATION_FOLDER
 cp -R "$INPUT_SOURCE_FILE" "$CLONE_DIR/$INPUT_DESTINATION_FOLDER"
 
+cd $CLONE_DIR
 echo $(pwd)
-
 ls
 
-cd ..
-ls
-echo $(pwd)
-cd ..
-ls
-echo $(pwd)
-cd ..
-ls
-echo $(pwd)
 cd "$INPUT_SCRIPT_FILE_DESTINATION"
+echo $(pwd)
+
 ruby "$INPUT_SCRIPT_FILE".rb
 
 echo $(pwd)
 
-cd "$CLONE_DIR"
+cd 
+cd "/github/workspace"
 
 
 if [ ! -z "$INPUT_DESTINATION_BRANCH_CREATE" ]
