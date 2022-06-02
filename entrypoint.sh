@@ -30,6 +30,7 @@ echo $(pwd)
 
 cd ..
 cd ..
+cd ..
 cd "$INPUT_SCRIPT_FILE_DESTINATION"
 ruby "$INPUT_SCRIPT_FILE".rb
 
