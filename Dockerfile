@@ -1,3 +1,4 @@
+FROM ruby:3.0.0
 FROM alpine
 
 RUN apk update && \
@@ -7,5 +8,3 @@ RUN apk update && \
 ADD entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT [ "/entrypoint.sh" ]
-
-FROM ruby:3.0.0
